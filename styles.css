@@ -1,0 +1,27 @@
+/*styling page*/
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+#canvas-container {
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+}
+
+#toolbar {
+    margin-bottom: 1rem;
+}
