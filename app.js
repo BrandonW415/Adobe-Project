@@ -19,3 +19,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+const rtdb = firebase.database();
+
+
+const authDiv = document.getElementById('auth');
+const appDiv = document.getElementById('app');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const signinButton = document.getElementById('signin');
+const signupButton = document.getElementById('signup');
+const canvas = document.getElementById('design-canvas');
+const ctx = canvas.getContext('2d');
+
+
+signinButton.addEventListener('click', () => {
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  auth.signInWithEmailandPassword(email, password)
+    .catch(error => console.error('Sign In Error:', error));
+});
+
+signupButton.addEventListener('click', () => {
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  auth.createUserWithEmailandPassword(email, password)
+    .catch(error => console.error('Sign Up Error:', error));
+});
