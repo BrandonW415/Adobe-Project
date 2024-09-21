@@ -25,3 +25,51 @@ main {
 #toolbar {
     margin-bottom: 1rem;
 }
+
+#version-control {
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input [type="email"],
+input [type="password"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#color-picker,
+#brush-size {
+    margin-right: 0.5rem;
+}
+
+#version-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#version-list li {
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+#version-list li:hover {
+    background-color: #e9ecef;
+}
