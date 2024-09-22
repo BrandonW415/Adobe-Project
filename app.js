@@ -96,4 +96,58 @@ function draw(e) {
   ctx.strokeStyle = colorPicker.value;
   ctx.lineWidth = brushSize.value;
   ctx.lineCap = 'round';
+
+  switch(currentTool) {
+    case 'pencil':
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      break;
+  }
+
+  switch(currentTool) {
+    case 'line':
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      break;
+  }
+
+  switch(currentTool) {
+    case 'rectangle':
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      break;
+  }
+
+  switch(currentTool) {
+    case 'circle':
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      break;
+  }
+
+  switch(currentTool) {
+    case 'text':
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      break;
+  }
+}
+
+function stopDrawing() {
+  isDrawing = false;
 }
