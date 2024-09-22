@@ -49,3 +49,34 @@ signupButton.addEventListener('click', () => {
   auth.createUserWithEmailandPassword(email, password)
     .catch(error => console.error('Sign Up Error:', error));
 });
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    authDiv.style.display = 'none';
+    appDiv.style.display = 'block';
+    initializeApp(user);
+  } else {
+    authDiv.style.display = 'block';
+    appDiv.style.display = 'none';
+  }
+});
+
+
+function initializeApp(user) {
+
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+
+
+  let currentTool = 'pencil';
+  document.getElementById('pencil').addEventListener('click', () => currentTool ='pencil');
+  document.getElementById('line').addEventListener('click', () => currentTool ='line');
+  document.getElementById('rectangle').addEventListener('click', () => currentTool ='rectangle');
+  document.getElementById('circle').addEventListener('click', () => currentTool ='circle');
+  document.getElementById('text').addEventListener('click', () => currentTool ='text');
+}
+
+
+const colorPicker = document.getElementById('color-picker');
+const brushSize = document.getElementById('brush-size');
